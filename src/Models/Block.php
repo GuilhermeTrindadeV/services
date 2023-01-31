@@ -48,6 +48,7 @@ class Block extends Model
         return $this->user;
     }
 
+    // Validar Campos
     private function validate() 
     {
         $errors = [];
