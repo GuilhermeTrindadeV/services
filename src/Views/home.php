@@ -82,11 +82,12 @@
 
                     if(response.success) {
                         alert(response.success);
-                        send_modal.modal('toggle')
+                        send_modal.modal('toggle');
                     }
                 }
             })
         });
+        toastr.success('Have fun storming the castle!', 'Miracle Max Says');
     });
 </script>
 <?php $this->end() ?>

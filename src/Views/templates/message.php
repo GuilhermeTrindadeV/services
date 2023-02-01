@@ -7,6 +7,9 @@
 ?>
 
 <?php if($message): ?>
+    <script>
+        toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+    </script>
     <div class="alert alert-<?= $message["type"] ?> text-white" role="alert">
         <?= $message["message"] ?>
     </div>

@@ -1,4 +1,5 @@
 <script src="<?= url("public/js/jquery.js") ?>"></script>
+<script src="<?= url("public/js/toastr.js") ?>"></script>
 <script src="<?= url("public/js/jquery-ui.js") ?>"></script>
 <script src="<?= url("themes/soft-ui/assets/js/core/popper.min.js") ?>"></script>
 <script src="<?= url("themes/soft-ui/assets/js/core/bootstrap.min.js") ?>"></script>
