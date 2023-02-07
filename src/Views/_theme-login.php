@@ -18,6 +18,7 @@
     <link href="<?= url("themes/soft-ui/assets/css/nucleo-svg.css") ?>" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="<?= url("themes/soft-ui/assets/css/soft-ui-dashboard.css?v=1.0.3") ?>" rel="stylesheet" />
+    <link href="<?= url("public/css/toastr.css") ?>" rel="stylesheet" />
     <?= $this->section("styles") ?>
 </head>
 
