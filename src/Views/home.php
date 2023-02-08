@@ -12,6 +12,7 @@
 ?>
 
 <div class="card">
+    <div id="script"></div>
     <div class="card-header bg-light pb-1">
         <div class="row text-center">
             <div class="col-md-4">
@@ -87,7 +88,7 @@
                 }
             })
         });
-        toastr.success('Have fun storming the castle!', 'Miracle Max Says');
     });
+        toastr.success('Seja Bem-Vindo(a) ao Services');
 </script>
 <?php $this->end() ?>

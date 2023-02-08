@@ -30,7 +30,7 @@ function addErrorMsg(string $msg)
 {
     $_SESSION[MESSAGE_NAME] = [
         "message" => $msg,
-        "type" => "danger"
+        "type" => "error"
     ];
 }
 

@@ -27,7 +27,6 @@
     <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
         <?php require(__DIR__ . "/templates/header.php"); ?>
         <div class="container-fluid py-4">
-            <?php echo $this->insert("templates/message") ?>
             <?= $this->section("content") ?>
             <?php require(__DIR__ . "/templates/footer.php"); ?> 
         </div>
@@ -35,7 +34,8 @@
     <?php 
         require(__DIR__ . "/templates/right.php"); 
         require(__DIR__ . "/templates/scripts.php"); 
-    ?>
+        ?>
     <?= $this->section("scripts") ?>
+    <?php echo $this->insert("templates/message") ?>
 </body>
 </html>
