@@ -9,12 +9,13 @@ use ReflectionClass;
 use Src\Models\User;
 use Src\Models\UserTypes;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 
-class Users extends Controller
+class Users extends Template1
 {
     public function users() 
     {
+        $this->setTemplate();
         $user = getUserSession();
         
         $userTypes = UserTypes::get();
@@ -41,6 +42,7 @@ class Users extends Controller
 
     public function get(array $data) 
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         $userData = [];
@@ -76,6 +78,7 @@ class Users extends Controller
 
     public function save(array $data) 
     {
+        $this->setTemplate();
         $user = $this->getUserSession();
 
         $userData = [];

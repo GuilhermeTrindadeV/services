@@ -10,13 +10,13 @@ use ReflectionClass;
 use Src\Models\User;
 use Src\Models\UserTypes;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 
-class AUserTypes extends Controller
+class AUserTypes extends Template1
 {
     public function userTypes() 
     {
-
+        $this->setTemplate();
         $user = getUserSession();
         if(!$user) {
             addErrorMsg("Você precisa estar logado para acessar essa área!");
@@ -31,8 +31,8 @@ class AUserTypes extends Controller
         $userTypes = UserTypes::get();
         if($userTypes) {
             foreach($userTypes as $userType) {
-                $userType->tip_culto_data_c = (new DateTime($userType->tip_culto_data_c))->format("d/m/Y H:i");
-                $userType->tip_culto_data_m = (new DateTime($userType->tip_culto_data_m))->format("d/m/Y H:i");
+                $userType->tip_data_c = (new DateTime($userType->tip_data_c))->format("d/m/Y H:i");
+                $userType->tip_data_m = (new DateTime($userType->tip_data_m))->format("d/m/Y H:i");
             }
         }
 

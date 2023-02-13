@@ -11,12 +11,13 @@ use Src\Models\User;
 use Src\Models\Service;
 use Src\Models\ServiceTypes;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 
-class Services extends Controller 
+class Services extends Template1 
 {
     public function service() 
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         $serviceTypes = ServiceTypes::get();

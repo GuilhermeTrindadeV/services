@@ -73,6 +73,15 @@ $router->post("/{block_id}", "Blocks:save", "blocks.update");
 $router->get("/{block_id}/delete", "Blocks:delete", "blocks.delete");
 $router->get("/criar", "Blocks:get", 'blocks.create');
 
+# Modelo a se Seguir de um CRUD
+// $router->group('eventos', \Src\App\Middlewares\MUser::class);
+// $router->get('/', 'CEvents:index', 'events.index');
+// $router->get('/criar', 'CEvents:create', 'events.create');
+// $router->post('/', 'CEvents:store', 'events.store');
+// $router->get('/{event_id}', 'CEvents:edit', 'events.edit');
+// $router->put('/{event_id}', 'CEvents:update', 'events.update');
+// $router->delete('/{event_id}', 'CEvents:delete', 'events.delete');
+
 $router->group('erro');
 $router->get("/{error_code}", "Error:main");
 

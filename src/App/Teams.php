@@ -11,9 +11,9 @@ use Src\Models\Team;
 use Src\Models\ServiceTypes;
 use Src\Models\Service;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 
-class Teams extends Controller 
+class Teams extends Template1 
 {
     public function team() 
     {

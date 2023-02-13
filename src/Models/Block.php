@@ -42,9 +42,9 @@ class Block extends Model
         return parent::save();
     }
 
-    public function user(string $columns = '*'): User
+    public function user(string $columns = '*'): ?User
     {
-        $this->user = User::getById($this->id, $columns);
+        $this->user = User::getById($this->blo_usu_id, $columns);
         return $this->user;
     }
 

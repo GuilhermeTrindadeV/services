@@ -58,20 +58,6 @@ class Controller
         return null;
     }
 
-    protected function addLeftMenu(): array 
-    {
-        return [
-            ["url" => url("inicio"), "name" => "Página Principal"],
-            ["url" => url("usuarios"), "name" => "Lista de Usuários"],
-            ["url" => url("tipo-de-usuarios"), "name" => "Tipos de Usuários"],
-            ["url" => url("equipes"), "name" => "Equipes"],
-            ["url" => url("musicas"), "name" => "Listas de Músicas"],
-            ["url" => url("cultos"), "name" => "Cultos"],
-            ["url" => url("tipos-de-culto"), "name" => "Tipos de Cultos"],
-            ["url" => url("bloqueios"), "name" => "Bloqueios"]
-        ];
-    }
-
     protected function setUserSession($user): void 
     {
         session_start();

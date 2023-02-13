@@ -8,9 +8,9 @@ use ReflectionClass;
 use Src\Models\User;
 use Src\Models\Song;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 
-class Songs extends Controller
+class Songs extends Template1
 {
     public function songs() 
     {

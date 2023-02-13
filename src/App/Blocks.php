@@ -10,12 +10,13 @@ use ReflectionClass;
 use Src\Models\User;
 use Src\Models\Block;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 
-class Blocks extends Controller 
+class Blocks extends Template1 
 {
     public function block() 
     {
+        $this->setTemplate();
         $session = getUserSession(); 
 
         session_start();
@@ -60,6 +61,8 @@ class Blocks extends Controller
         } catch(Exception $e) {
             addErrorMsg($e->getMessage());
         }
+
+        
 
         $this->renderView("save-block", $blockData + [
             "saveBlockURL" => $saveBlockURL,

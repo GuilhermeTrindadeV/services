@@ -1,7 +1,6 @@
 <?php 
     $this->layout("_theme", [
         "title" => "Início",
-        "items" => $items
     ]) 
 ?>
 
@@ -75,20 +74,19 @@
                 url: send_form.attr('action'),
                 type: send_form.attr('method'),
                 data: send_form.serialize(),
-                datatype: 'json',
+                dataType: 'json',
                 success: function (response) {
                     if(response.error) {
-                        alert(response.error);
+                        toastr.error(response.error);
                     }
 
                     if(response.success) {
-                        alert(response.success);
+                        toastr.success(response.success);
                         send_modal.modal('toggle');
                     }
                 }
             })
         });
     });
-        toastr.success('Seja Bem-Vindo(a) ao Services');
 </script>
 <?php $this->end() ?>

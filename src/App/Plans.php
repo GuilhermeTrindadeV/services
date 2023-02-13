@@ -10,9 +10,9 @@ use ReflectionClass;
 use Src\Models\Service;
 use Src\Models\User;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 
-class Plans extends Controller {
+class Plans extends Template1 {
     public function plans() 
     {
         $session = getUserSession(); 

@@ -10,13 +10,14 @@ use ReflectionClass;
 use Src\Models\User;
 use Src\Models\Service;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 use Src\Support\Email;
 
-class Web extends Controller 
+class Web extends Template1 
 {
     public function home() 
     {
+        $this->setTemplate();
         $session = getUserSession(); 
         if(!$session) {
             addErrorMsg("Você precisa estar logado para acessar a Página Principal");
@@ -27,8 +28,7 @@ class Web extends Controller
         $services = Service::get();
 
         $this->renderView("home", [
-            "services" => $services,
-            "items" => $this->addLeftMenu()
+            "services" => $services
         ]);
     }   
 

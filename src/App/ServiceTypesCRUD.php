@@ -11,12 +11,13 @@ use Src\Models\User;
 use Src\Models\Service;
 use Src\Models\ServiceTypes;
 use Src\Exceptions\AppException;
-use Src\App\Controller;
+use Src\App\Template1;
 
-class ServiceTypesCRUD extends Controller 
+class ServiceTypesCRUD extends Template1 
 {
     public function serviceTypes() 
     {
+        $this->setTemplate();
         $user = getUserSession();
         if(!$user) {
             addErrorMsg("Você precisa estar logado para acessar essa área!");

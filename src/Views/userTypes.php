@@ -1,8 +1,7 @@
 <?php 
     $this->layout("_theme", [
         "title" => "Tipo de Usuários | Services",
-        "items" => $items
-    ]) 
+    ]);
 ?>
 
 <div class="card">

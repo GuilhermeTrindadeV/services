@@ -23,19 +23,19 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
-    <?php require(__DIR__ . "/templates/left.php"); ?>
+    <?= $this->insert("/templates/left", $left); ?>
     <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
-        <?php require(__DIR__ . "/templates/header.php"); ?>
+        <?= $this->insert("/templates/header"); ?>
         <div class="container-fluid py-4">
             <?= $this->section("content") ?>
-            <?php require(__DIR__ . "/templates/footer.php"); ?> 
+            <?= $this->insert("/templates/footer"); ?> 
         </div>
     </main>
-    <?php 
-        require(__DIR__ . "/templates/right.php"); 
-        require(__DIR__ . "/templates/scripts.php"); 
+    <?= 
+        $this->insert("/templates/right"); 
+        $this->insert("/templates/scripts"); 
         ?>
     <?= $this->section("scripts") ?>
-    <?php echo $this->insert("templates/message") ?>
+    <?= $this->insert("templates/message") ?>
 </body>
 </html>
