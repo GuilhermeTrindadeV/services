@@ -17,6 +17,7 @@ class Teams extends Template1
 {
     public function team() 
     {
+        $this->setTemplate();
         $session = getUserSession(); 
 
         session_start();
@@ -44,6 +45,7 @@ class Teams extends Template1
 
     public function get(array $data) 
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         $teamData = [];
@@ -79,6 +81,7 @@ class Teams extends Template1
 
     public function save(array $data) 
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         $teamData = [];

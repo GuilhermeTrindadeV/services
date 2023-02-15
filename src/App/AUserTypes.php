@@ -44,7 +44,7 @@ class AUserTypes extends Template1
 
     public function get(array $data) 
     {
-
+        $this->setTemplate();
         $user = getUserSession();
         if(!$user) {
             addErrorMsg("Você precisa estar logado para acessar essa área!");
@@ -88,7 +88,7 @@ class AUserTypes extends Template1
 
     public function save(array $data) 
     {
-
+        $this->setTemplate();
         $user = getUserSession();
         if(!$user) {
             addErrorMsg("Você precisa estar logado para acessar essa área!");

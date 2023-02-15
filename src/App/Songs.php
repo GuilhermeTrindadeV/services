@@ -3,6 +3,7 @@
 namespace Src\App;
 
 use DateTime;
+use Exception;
 use League\Plates\Engine;
 use ReflectionClass;
 use Src\Models\User;
@@ -14,6 +15,7 @@ class Songs extends Template1
 {
     public function songs() 
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         session_start();
@@ -34,6 +36,7 @@ class Songs extends Template1
 
     public function get(array $data)
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         $songData = [];
@@ -67,6 +70,7 @@ class Songs extends Template1
 
     public function save(array $data)
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         $songData = [];

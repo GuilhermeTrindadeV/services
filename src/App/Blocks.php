@@ -37,6 +37,7 @@ class Blocks extends Template1
 
     public function get(array $data) 
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         $blockData = [];
@@ -72,6 +73,7 @@ class Blocks extends Template1
 
     public function save(array $data) 
     {
+        $this->setTemplate();
         $user = getUserSession();
 
         $blockData = [];
