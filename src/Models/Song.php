@@ -42,7 +42,8 @@ class Song extends Model
 
     public function user(string $columns = '*'): ?User
     {
-        $this->user = User::getById($this->id, $columns);
+        $this->user = User::getById($this->mus_usu_criador, $columns);
+        return $this->user;
     }
 
     private function validate() 
