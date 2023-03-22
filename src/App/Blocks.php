@@ -26,6 +26,8 @@ class Blocks extends Template1
             foreach($blocks as $block) {
                 $block->blo_data_c = (new DateTime($block->blo_data_c))->format("d/m/Y H:i");
                 $block->blo_data_m = (new DateTime($block->blo_data_m))->format("d/m/Y H:i");
+                $block->blo_data_inicio = (new DateTime($block->blo_data_inicio))->format("d/m/Y H:i");
+                $block->blo_data_termino = (new DateTime($block->blo_data_termino))->format("d/m/Y H:i");
             }
         }
 
