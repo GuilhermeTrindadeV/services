@@ -65,8 +65,6 @@ class Blocks extends Template1
             addErrorMsg($e->getMessage());
         }
 
-        
-
         $this->renderView("save-block", $blockData + [
             "saveBlockURL" => $saveBlockURL,
             "items" => $this->addLeftMenu()

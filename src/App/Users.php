@@ -66,7 +66,7 @@ class Users extends Template1
                 $saveURL = $this->getRoute("users.store");
             }
         } catch(Exception $e) {
-            $this->addMsg($e->getMessage(), 'error');
+            addErrorMsg($e->getMessage());
         }
 
         $this->renderView("save-user", $userData + [

@@ -35,10 +35,10 @@
                 
                 <div>
                     <label for="motivo" class="form-label">Motivo</label>
-                    <textarea type="text" class="form-control
-                        <?= $errors["blo_motivo"] ? 'is-invalid' : "" ?>" 
+                    <input type="text" class="form-control
+                        <?= $errors["blo_motivo"] ? "is-invalid" : "" ?>" 
                         id="motivo" name="blo_motivo" value="<?= $blo_motivo ?>" 
-                        placeholder="Motivo para o bloqueio..." maxlength="300"></textarea>
+                        placeholder="Motivo para o bloqueio..." maxlength="300">
                         <div class="invalid-feedback"><?= $errors["blo_motivo"] ?></div>
                 </div>
             </div>
