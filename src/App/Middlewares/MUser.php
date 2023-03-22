@@ -14,6 +14,11 @@ class MUser
             header('Location: ' . $router->route('web.login'));
             exit();
             return false;
+        } elseif(!$user->isAdmin() && !$user->isEditor()) {
+            addErrorMsg("Você precisa de permissão de Administrador para entrar!");
+            header('Location: ' . $router->route("web.login"));
+            exit();
+            return false;
         }
 
         return true;

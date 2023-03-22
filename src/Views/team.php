@@ -29,9 +29,6 @@
                             Líder da Equipe
                         </th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                            Tipo de Culto da Equipe
-                        </th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                             Data de Criação
                         </th>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -47,17 +44,10 @@
                     <tr>
                         <td>
                             <div class="d-flex px-2 py-1">
-                                <div>
-                                    <img src="<?= url("themes/soft-ui/assets/img/team-1.jpg") ?>" class="avatar avatar-sm me-3" alt="team1">
-                                </div>
                                 <div class="d-flex flex-column justify-content-center">
                                     <h6 class="mb-0 text-sm"><?= $team->equi_nome ?></h6>
-                                    <p class="mb-0 text-sm"><?= $team->equi_id ?></p>
                                 </div>
                             </div>
-                        </td>
-                        <td>
-                            <p class="text-xs font-weight-bold mb-0 text-center"><?= $team->equi_tipo_culto ?></p>
                         </td>
                         <td class="align-middle text-center">
                             <span class="text-secondary text-xs font-weight-bold"><?= $team->equi_data_c ?></span>
