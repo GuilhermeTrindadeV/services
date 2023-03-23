@@ -8,22 +8,9 @@
 <div card="card" id="teste">
     <div class="card-header bg-light pt-4">
         <div class="d-flex bd-highlight">
-            <div class="me-auto p-2 bd-highlight">
-                <button class="btn btn-light" checked>Ordem</button>
-                <button class="btn btn-light" >Teme</button>
-                <button class="btn btn-light" >Ensaiar</button>
-            </div>
             <div class="p-2 bd-highlight">
-                <div class="btn border border-success">
-                    <a href="#"></a>
-                    <i class="fa fa-arrow-up d-flex justify-content-start"></i>
-                </div>
-                <div class="btn border border-success">
-                    <a href="#"></a>
-                    <i class="fa fa-music d-flex justify-content-start"></i>
-                </div>
                 <div class="btn btn-sm border border-success">
-                    <a href="#" class="text text-muted">Adicionar</a>
+                    <a href="#" class="text text-muted">Adicionar Música</a> 
                 </div>
             </div>
         </div>
