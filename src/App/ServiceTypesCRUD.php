@@ -138,14 +138,14 @@ class ServiceTypesCRUD extends Template1
             ]);
             if(!$dbServiceTypes) {
                 addErrorMsg("Nenhumo Tipo de Culto foi encontrado!");
-                $this->redirectTo("tipo-de-culto");
+                $this->redirectTo("tipos-de-culto");
                 exit();
             }
 
             $dbServiceTypes->destroy();
 
             $this->addMsg("O Tipo de Culto \"$dbServiceTypes->tip_culto_nome\" foi excluído com sucesso!");
-            $this->redirectTo("tipo-de-culto");
+            $this->redirectTo("tipos-de-culto");
             exit();
         } catch(Exception $e) {
             AddErrorMsg($e->getMessage());
