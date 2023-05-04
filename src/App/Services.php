@@ -37,6 +37,10 @@ class Services extends Template1
             foreach($services as $service) {
                 $service->cult_data_c = (new DateTime($service->cult_data_c))->format("d/m/Y H:i");
                 $service->cult_data_m = (new DateTime($service->cult_data_m))->format("d/m/Y H:i");
+                $service->cult_data_inicio = (new DateTime($service->cult_data_inicio))->format("d/m/Y H:i");
+                $service->cult_hora_inicio = (new DateTime($service->cult_hora_inicio))->format("d/m/Y H:i");
+                $service->cult_data_termino = (new DateTime($service->cult_data_termino))->format("d/m/Y H:i");
+                $service->cult_hora_termino = (new DateTime($service->cult_hora_termino))->format("d/m/Y H:i");
             }
         }
 
@@ -112,7 +116,11 @@ class Services extends Template1
             $dbService->setValues([
                 "cult_usu_criador" => $user->id,
                 "cult_nome" => $data["cult_nome"],
-                "cult_tipo" => $data["cult_tipo"]
+                "cult_data_inicio" => $data["cult_data_inicio"],
+                "cult_hora_inicio" => $data["cult_hora_inicio"],
+                "cult_data_termino" => $data["cult_data_termino"],
+                "cult_hora_termino" => $data["cult_hora_termino"],
+                "cult_tipo" => $data["cult_tipo"],
             ]);
             $dbService->save();
 

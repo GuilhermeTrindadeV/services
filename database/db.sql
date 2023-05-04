@@ -57,6 +57,10 @@ CREATE TABLE culto (
     cult_usu_criador INT(1) NOT NULL,
     cult_nome VARCHAR(100) NOT NULL, 
     cult_tipo INT(1) NOT NULL,
+    cult_data_inicio DATE NOT NULL,
+    cult_hora_inicio TIME NOT NULL,
+    cult_data_termino DATE NOT NULL,
+    cult_hora_termino TIME NOT NULL,
     cult_data_c DATETIME NOT NULL,
     cult_data_m DATETIME NOT NULL
 );
@@ -86,6 +90,13 @@ CREATE TABLE equipe_usuario (
     eq_usu_id INT(1) AUTO_INCREMENT PRIMARY KEY,
     eq_usu_eq_id INT(1) NOT NULL,
     eq_usu_usu_id INT(1) NOT NULL
+);
+
+-- Tabela Associativa da Equipe e do Usuário --
+CREATE TABLE culto_equipe (
+    cult_eq_id INT(1) AUTO_INCREMENT PRIMARY KEY,
+    cult_eq_cult_id INT(1) NOT NULL,
+    cult_eq_eq_id INT(1) NOT NULL
 );
 
 CREATE TABLE culto_musica (

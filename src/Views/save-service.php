@@ -15,6 +15,34 @@
                         name="cult_nome" value="<?= $cult_nome ?>">
                         <div class="invalid-feedback"><?= $errors["cult_nome"] ?></div>
                 </div>
+
+                <div class="form-group col-md-6">
+                    <label for="nome">Data de início do Culto</label>
+                    <input type="date" class="form-control <?= $errors["cult_data_inicio"] ? "is-invalid" : "" ?>" 
+                        name="cult_data_inicio" value="<?= $cult_data_inicio ?>">
+                        <div class="invalid-feedback"><?= $errors["cult_data_inicio"] ?></div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="nome">Hora de início do Culto</label>
+                    <input type="time" class="form-control <?= $errors["cult_hora_inicio"] ? "is-invalid" : "" ?>" 
+                        name="cult_hora_inicio" value="<?= $cult_hora_inicio ?>">
+                        <div class="invalid-feedback"><?= $errors["cult_hora_inicio"] ?></div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="nome">Data de término do Culto</label>
+                    <input type="date" class="form-control <?= $errors["cult_data_termino"] ? "is-invalid" : "" ?>" 
+                        name="cult_data_termino" value="<?= $cult_data_termino ?>">
+                        <div class="invalid-feedback"><?= $errors["cult_data_termino"] ?></div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="nome">Hora de termino do Culto</label>
+                    <input type="time" class="form-control <?= $errors["cult_hora_termino"] ? "is-invalid" : "" ?>" 
+                        name="cult_hora_termino" value="<?= $cult_hora_termino ?>">
+                        <div class="invalid-feedback"><?= $errors["cult_hora_termino"] ?></div>
+                </div>
     
                 <div class="form-group col-md-6">
                     <label for="tipo">Tipo de Culto</label>

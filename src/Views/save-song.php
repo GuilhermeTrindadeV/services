@@ -26,8 +26,22 @@
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="tom">Tom</label>
-                    <input type="text" class="form-control <?= $errors["mus_tom"] ? "is-invalid" : "" ?>" 
+                    <select class="form-control <?= $errors["mus_tom"] ? "is-invalid" : "" ?>" 
                         name="mus_tom" value="<?= $mus_tom ?>" maxlength="3">
+                        <option value="">Selecionar...</option>
+                        <option value="">C</option>
+                        <option value="">C#</option>
+                        <option value="">D</option>
+                        <option value="">D#</option>
+                        <option value="">E</option>
+                        <option value="">F</option>
+                        <option value="">F#</option>
+                        <option value="">G</option>
+                        <option value="">G#</option>
+                        <option value="">A</option>
+                        <option value="">A#</option>
+                        <option value="">B</option>
+                    </select>
                         <div class="invalid-feedback"><?= $errors["mus_tom"] ?></div>
                 </div>
             </div>

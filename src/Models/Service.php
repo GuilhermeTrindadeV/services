@@ -15,6 +15,10 @@ class Service extends Model
         "cult_usu_criador",
         "cult_nome",
         "cult_tipo",
+        "cult_data_inicio",
+        "cult_hora_inicio",
+        "cult_data_termino",
+        "cult_hora_termino",
         "cult_data_c",
         "cult_data_m"
     ];
@@ -23,6 +27,10 @@ class Service extends Model
         "cult_usu_criador",
         "cult_nome",
         "cult_tipo",
+        "cult_data_inicio",
+        "cult_hora_inicio",
+        "cult_data_termino",
+        "cult_hora_termino",
         "cult_data_c",
         "cult_data_m"
     ];
@@ -59,6 +67,30 @@ class Service extends Model
 
         if(!$this->cult_tipo) {
             $errors["cult_tipo"] = "O Tipo de Culto é Obrigatório";
+        }
+
+        if(!$this->cult_data_inicio) {
+            $errors["cult_data_inicio"] = "A Data de início do culto é obrigatória!";
+        } elseif(!DateTime::createFromFormat("Y-m-d", $this->cult_data_inicio)) {
+            $errors["cult_data_inicio"] = "O formato de data precisa ser dd/mm/aaaa";
+        }
+
+        if(!$this->cult_hora_inicio) {
+            $errors["cult_hora_inicio"] = "A Hora de início do culto é obrigatória!";
+        } elseif(!DateTime::createFromFormat("H:i", $this->cult_hora_inicio)) {
+            $errors["cult_hora_inicio"] = "O formato de data precisa ser hh:mm.";
+        }
+
+        if(!$this->cult_data_termino) {
+            $errors["cult_data_termino"] = "A Data de término do culto é obrigatória!";
+        } elseif(!DateTime::createFromFormat("Y-m-d", $this->cult_data_termino)) {
+            $errors["cult_data_termino"] = "O formato de data precisa ser dd/mm/aaaa";
+        }
+
+        if(!$this->cult_hora_termino) {
+            $errors["cult_hora_termino"] = "A Hora de término do culto é obrigatória!";
+        } elseif(!DateTime::createFromFormat("H:i", $this->cult_hora_termino)) {
+            $errors["cult_hora_termino"] = "O formato de data precisa ser hh:mm.";
         }
 
         if(!$this->cult_data_c) {
