@@ -1,8 +1,15 @@
 <?php 
     $this->layout("_theme-header", [
-        "title" => "Planos | Services",
+        "title" => "Plano | Services",
         "items" => $items
     ])
+?>
+
+<?php 
+    $this->insert('components/save-song', [
+        'action' => $router->route('plans.addSong', ['services_id' => $service->cult_id]),
+        'songs' => $songs
+    ]); 
 ?>
 
 <div card="card" id="teste">
@@ -10,13 +17,13 @@
         <div class="d-flex bd-highlight">
             <div class="p-2 bd-highlight">
                 <div class="btn btn-sm border border-success">
-                    <a href="#" class="text text-muted">Adicionar Música</a> 
+                    <a href="#" class="text text-muted" id="adicionar" data-bs-toggle="modal" data-bs-target="#save-song-modal">Adicionar Música</a> 
                 </div>
             </div>
         </div>
     </div>
     <div class="card-body" style="background-color: #4bff0054">
-        <table class="table table-light mb-0 pb-0">
+        <table class="table table-light mb-0 pb-0" id="heiress-table">
             <thead>
                 <tr>
                     <th style="width: 32px;" scope="col"></th>
@@ -116,6 +123,34 @@
         const song_list = $("[list]");
         song_list.sortable({
             handle: "[handler]"
+        });
+
+        var copia = document.querySelector("#heiress-table tbody tr").outerHTML;
+
+        $("#adicionar").on("click", function() {
+            $("#heiress-table").append(copia);
+        });
+
+        const form = $("#save-song");
+
+        $("#save-song").on("submit", function() {
+            $("#save-song-modal").modal("hide");
+        });
+        
+        form.submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: form.attr('action'),
+                type: form.attr('method'),
+                data: form.serialize(),
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    if(response.success) {
+                        toastr.success(response.message);
+                    }
+                }
+            });
         });
     });
 </script>

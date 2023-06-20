@@ -13,7 +13,6 @@ class TeamUser extends Model
     protected static $columns = [
         "eq_usu_eq_id",
         "eq_usu_usu_id"
-        
     ];
     
     protected static $required = [

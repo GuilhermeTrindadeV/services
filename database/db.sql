@@ -102,5 +102,6 @@ CREATE TABLE culto_equipe (
 CREATE TABLE culto_musica (
     cult_mus_id INT(1) AUTO_INCREMENT PRIMARY KEY,
     cult_id INT(1) NOT NULL,
-    mus_id INT(1) NOT NULL
+    mus_id INT(1) NOT NULL,
+    position INT(1) NOT NULL
 );

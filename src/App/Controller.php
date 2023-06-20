@@ -14,6 +14,7 @@ class Controller
     public function __construct($router) 
     {
         $this->view = new Engine(__DIR__ . "/../Views", "php");
+        $this->view->addData(['router' => $router]);
         $this->router = $router;
     }
 

@@ -16,6 +16,7 @@ $router->group('planos', \Src\App\Middlewares\MUser::class);
 $router->get("/", "Plans:plans", 'plans.plans');
 $router->get("/{services_id}", "Plans:get", 'plans.create');
 $router->post("/", "Plans:plans", 'plans.plans');
+$router->post("/{services_id}/add", "Plans:addSong", 'plans.addSong');
 
 $router->group('usuarios', \Src\App\Middlewares\MUser::class);
 $router->get("/", "Users:users", 'users.users');

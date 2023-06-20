@@ -28,6 +28,7 @@
         <?= $this->insert("/templates/header"); ?>
         <div class="container-fluid py-4">
             <?= $this->section("content") ?>
+            <script> const salvar = <?php echo json_encode(url('plans.addSong')) ?>; </script>
             <?= $this->insert("/templates/footer"); ?> 
         </div>
     </main>
